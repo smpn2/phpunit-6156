@@ -14,6 +14,7 @@ class MyServiceTest extends TestCase
         $mockedService = $this->createMock(MyService::class);
 
         $mockedService
+            ->expects($this->exactly(1))
             ->method('get')
             ->with(24)
             ->willReturn('24');
