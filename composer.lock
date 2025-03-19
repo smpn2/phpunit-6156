@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b36af01cd10a18f7a74a6604def789f0",
+    "content-hash": "827dac06235ac291f63cd3b903b1d52d",
     "packages": [],
     "packages-dev": [
         {
@@ -676,16 +676,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.0.8",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ef9ca85556e4142ee2ca05ffb5afbe4303da20ac"
+                "reference": "c9fa5f5504ca03cb9565e9130cfc87bc74b44910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ef9ca85556e4142ee2ca05ffb5afbe4303da20ac",
-                "reference": "ef9ca85556e4142ee2ca05ffb5afbe4303da20ac",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c9fa5f5504ca03cb9565e9130cfc87bc74b44910",
+                "reference": "c9fa5f5504ca03cb9565e9130cfc87bc74b44910",
                 "shasum": ""
             },
             "require": {
@@ -715,24 +715,66 @@
                 "sebastian/version": "^6.0.0",
                 "staabm/side-effects-detector": "^1.0.5"
             },
+            "default-branch": true,
             "bin": [
                 "phpunit"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "12.0-dev"
+                    "dev-main": "12.1-dev"
                 }
             },
             "autoload": {
-                "files": [
-                    "src/Framework/Assert/Functions.php"
-                ],
                 "classmap": [
                     "src/"
+                ],
+                "files": [
+                    "src/Framework/Assert/Functions.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "classmap": [
+                    "tests/_files"
+                ],
+                "files": [
+                    "tests/_files/deprecation-trigger/trigger_deprecation.php",
+                    "tests/unit/Event/AbstractEventTestCase.php",
+                    "tests/unit/TextUI/AbstractSouceFilterTestCase.php",
+                    "tests/unit/Framework/MockObject/TestDoubleTestCase.php",
+                    "tests/unit/Metadata/Parser/AttributeParserTestCase.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyArrayTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyBoolTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyCallableTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyFloatTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyInstancesOfTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyIntTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyIterableTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyNullTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyNumericTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyObjectTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyResourceTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyClosedResourceTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyScalarTest.php",
+                    "tests/unit/Framework/Assert/assertContainsOnlyStringTest.php",
+                    "tests/unit/Framework/Assert/assertDirectoryExistsTest.php",
+                    "tests/unit/Framework/Assert/assertFileExistsTest.php",
+                    "tests/unit/Framework/Assert/assertIsNumericTest.php",
+                    "tests/unit/Framework/Assert/assertIsObjectTest.php",
+                    "tests/unit/Framework/Assert/assertIsReadableTest.php",
+                    "tests/unit/Framework/Assert/assertIsResourceTest.php",
+                    "tests/unit/Framework/Assert/assertIsScalarTest.php",
+                    "tests/unit/Framework/Assert/assertIsStringTest.php",
+                    "tests/unit/Framework/Assert/assertIsWritableTest.php",
+                    "tests/unit/Framework/Assert/assertMatchesRegularExpressionTest.php",
+                    "tests/unit/Framework/Assert/assertNullTest.php",
+                    "tests/unit/Framework/Assert/assertSameSizeTest.php",
+                    "tests/unit/Framework/Assert/assertSameTest.php",
+                    "tests/_files/CoveredFunction.php",
+                    "tests/_files/Generator.php",
+                    "tests/_files/NamespaceCoveredFunction.php"
+                ]
+            },
             "license": [
                 "BSD-3-Clause"
             ],
@@ -753,23 +795,23 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.0.8"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/main"
             },
             "funding": [
                 {
-                    "url": "https://phpunit.de/sponsors.html",
-                    "type": "custom"
+                    "type": "github",
+                    "url": "https://github.com/sebastianbergmann"
                 },
                 {
-                    "url": "https://github.com/sebastianbergmann",
-                    "type": "github"
+                    "type": "tidelift",
+                    "url": "https://tidelift.com/funding/github/packagist/phpunit/phpunit"
                 },
                 {
-                    "url": "https://tidelift.com/funding/github/packagist/phpunit/phpunit",
-                    "type": "tidelift"
+                    "type": "custom",
+                    "url": "https://phpunit.de/sponsors.html"
                 }
             ],
-            "time": "2025-03-18T13:44:41+00:00"
+            "time": "2025-03-19T13:08:03+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -1689,7 +1731,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "phpunit/phpunit": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

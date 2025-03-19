@@ -1,8 +1,14 @@
 {
     "name": "nre/phpunit-6154",
     "description": "https://github.com/sebastianbergmann/phpunit/issues/6154",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sebastianbergmann/phpunit.git"
+        }
+    ],
     "require-dev": {
-        "phpunit/phpunit": "^12.0",
+        "phpunit/phpunit": "dev-main",
         "phpstan/phpstan": "^2.1",
         "phpstan/phpstan-phpunit": "^2.0"
     },
