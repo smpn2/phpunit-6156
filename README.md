@@ -12,10 +12,10 @@ Running PHPStan with `composer analyze` will yield the following error:
  ------ ----------------------------------------------------------------------------------------------------
 ```
 
-Running the sam analysis with PHPUnit 11 do work as expected:
+Running the sam analysis with PHPUnit 12.0.8 do work as expected:
 
 ```
-composer require --dev --with-all-dependencies phpunit/phpunit:^11.5
+composer require --dev --with-all-dependencies phpunit/phpunit:12.0.8
 composer analyze
 
 
